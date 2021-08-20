@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function ()
+        {
+            var aA=document.getElementsByTagName('a');
+
+            for (let index = 0; index < aA.length; index++) {
+                aA[index].onclick=function ()
+                {
+                    this.parentNode.style.display='none';
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" style="width: 100px; height: 100px; background: red; margin: 100px;">
+        <div onclick="alert(this.offsetParent.tagName)" style="width: 100px; height: 100px; background: yellow; position:absolute; left: 100px; top: 100px;"></div>
+    </div>
+</body>
+</html>

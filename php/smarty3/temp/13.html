@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+    {literal}
+        缓存
+    smarty在页面缓存的情况下，可以设置部分内容不缓存，
+    这比较有用，
+    因为页面的某部分，比如是随机广告，股票信息，时间等等
+    这些，就适宜缓存起来
+
+    在smarty中，想控制局部不缓存，方法非常多
+    1.在标签中控制，该标签不缓存（$标签 nocache）
+    2.控制一片标签，不缓存{nocache}XXX{/nocache}控制的区域比较大
+    3.在PHP中赋值时，就控制不缓存[smarty3新增]
+    注意：不缓存的标签，要保证总能从HPP处得到值
+    4.{insert name="xxx" parm1="v1" parm2="v2"} 这个方式来写
+    原理是：调用 insert_xxx{array(parm1="v1" parm2="v2")}的返回值，来显示的
+    {/literal}
+    <h2>当前时间:{$time1|date_format:"%Y-%m-%d %H-%M-%S"}</h2>
+    <h2>当前时间:{$time1|date_format:"%Y-%m-%d %H-%M-%S" nocache}</h2>
+    {nocache}<h2>当前时间:{$time1|date_format:"%Y-%m-%d %H-%M-%S" nocache}</h2>{/nocache}
+    <h2>当前时间:{$time2|date_format:"%Y-%m-%d %H-%M-%S"}</h2>
+    <p>{insert name="welcome" age="21"}</p>
+    <table  width="40%" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>序号</td><td>商品名</td><td>商品价格</td>
+        </tr>
+        {foreach $goods as $k => $g}
+        <tr {if $g@first % 2} bgcolor="#2e8b57" {/if}>
+            <td>{$g@iteration}</td>
+            <td>{$g.tilte}</td>
+            <td>{$g.nid}</td>
+        </tr>
+        {/foreach}
+    </table>
+</body>
+</html>

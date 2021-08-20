@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul1{ background: red;}
+        #ul2{ background: yellow;}
+    </style>
+    <script>
+        window.onload=function ()
+        {
+            var oBtn=document.getElementById('btn1');
+            var oUl1=document.getElementById('ul1');
+
+            oBtn.onclick=function ()
+            {
+                var aLi=oUl1.getElementsByTagName('li');
+                
+                oUl1.appendChild(aLi[0]);
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="移动">
+    <ul id="ul1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <ul id="ul2">
+
+    </ul>
+
+</body>
+
+</html>

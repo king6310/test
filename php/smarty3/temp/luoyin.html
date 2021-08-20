@@ -1,0 +1,18 @@
+{config_load file ='site.conf'}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>{$name}</h2>
+    <p>{$poen}</p>
+    <p>{$id}</p>
+    <p>{$smarty.get.id}</p>
+    <p>{$smarty.const.HEI}</p>
+    <address>
+        类型：{$smarty.config.site}<br/>
+        电话：{#tel#}
+    </address>
+</body>
+</html>

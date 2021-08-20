@@ -1,0 +1,28 @@
+宿主对象
+
+宿主：生活环境
+
+JS：浏览器(DOM、BOM)
+
+document
+window
+
+
+
+本地对象(非静态对象)
+内置对象(静态对象)
+
+var oMath=new Math();
+
+oMath.ceil
+
+Math    不需要实列化(new),直接可以用----静态对象
+
+
+Array.push(...)
+
+var arr=new Array();
+
+arr.push();
+
+Math    需要,只能用new出来----非静态对象

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ul1{ background: red;}
+        #ul2{ background: yellow;}
+    </style>
+    <script>
+        window.onload=function ()
+        {
+            var oBtn=document.getElementById('btn1');
+            var oUl=document.getElementById('ul1');
+
+            oBtn.onclick=function ()
+            {
+                var aLi=oUl.getElementsByTagName('li');
+                var arr=[];
+                
+                //1.转成数组
+                for (let index = 0; index < aLi.length; index++) {
+                    const element = aLi[index];
+                    arr[index]=element;
+                }
+
+                //2.数组排序
+                arr.sort(function(li1, li2){
+                    return parseInt(li1.innerHTML)-parseInt(li2.innerHTML);
+                });
+
+                //3.重新插入
+                for (let index = 0; index < arr.length; index++) {
+                    const element = arr[index];
+                    oUl.appendChild(element);
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="排序Li">
+    <ul id="ul1">
+        <li>56</li>
+        <li>33</li>
+        <li>40</li>
+        <li>12</li>
+        <li>28</li>
+    </ul>
+</body>
+
+</html>

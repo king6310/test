@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+    {literal}
+        <h2>变量调节器</h2>
+        变量调节器，是在模板中，修改变量的显示形式的一种功能
+        通过变量调节器，来对变量的值进行微调
+        比如 此例中，把时间戳微调成日期
+        变量调节器的本质是一个函数，
+        这个函数，以标签对应的变量值为参数，然后运算，
+        把返回值，显示在标签中
+    {/literal}
+    <h2>布尔商城商品列表</h2>
+    <table  width="40%" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>序号</td><td>商品名</td><td>商品价格</td><td>发布时间</td>
+        </tr>
+        {foreach $goods as $k => $g}
+        <tr>
+            <td>{$g@iteration}</td><td>{$g.tilte}</td><td>{$g.nid}</td><td>{$g.time}</td>
+        </tr>
+        {/foreach}
+    </table><br/>
+    <table  width="40%" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>序号</td><td>商品名</td><td>商品价格</td><td>发布时间</td>
+        </tr>
+        {foreach $goods as $k => $g}
+        <tr>
+            <td>{$g@iteration}</td><td>{$g.tilte}</td><td>{$g.nid}</td><td>{$g.time|date_format:"%Y-%m-%d %H:%M:%S"}</td>
+        </tr>
+        {/foreach}
+    </table>
+    <p>{$poem|upper}</p>
+    <p>{$poem|lower}</p>
+    <p>{$poem|upper|lower}</p>
+</body>
+</html>

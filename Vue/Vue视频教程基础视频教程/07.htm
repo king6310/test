@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <script src="../vue.min.js"></script>
+    <style>
+        .completed{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+
+        <task-app :list="tasks"></task-app>
+        <task-app :list="[{body:'king', completed:true}]"></task-app>
+        <task-app :list="tasks"></task-app>
+    </div>
+
+    <template id="task-template">
+        <ul>
+            <li 
+            @click="task.completed=!task.completed" 
+            :class="{'completed':task.completed}" 
+            v-for="task in list"
+         > 
+             {{ task.body }}
+ 
+         </li>
+        </ul>
+    </template>
+    <script>
+        Vue.component('task-app',{
+            props:['list'],
+            template: '#task-template',
+        })
+        new Vue({
+            el: '#app',
+            data:{
+                tasks:[
+                    {body:'go to the movie', completed:false},
+                    {body:'go to the js in ction', completed:false},
+                    {body:'go to the shop', completed:false} 
+                ]
+            },
+            methods:{
+                toggLetasks (task) {
+                    task.completed=!task.completed;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

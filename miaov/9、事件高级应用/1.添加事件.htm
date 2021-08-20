@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+		function aaa()
+		{
+			alert('a');
+		}
+		function bbb()
+		{
+			alert('b');
+		}
+		window.onload=function ()
+		{
+			var oBtn=document.getElementById('btn1');
+
+			// oBtn.onclick=aaa;
+			// oBtn.onclick=bbb;
+
+			//对象.attachEvent(事件名, 函数)
+
+			//IE
+			// oBtn.attachEvent('onclick', aaa);
+			// oBtn.attachEvent('onclick', bbb);
+
+			//FF
+			// oBtn.addEventListener('click', aaa, false);
+			// oBtn.addEventListener('click', bbb, false);
+
+			if(oBtn.attachEvent)
+			{
+				oBtn.attachEvent('onclick', aaa);
+				oBtn.attachEvent('onclick', bbb);
+			}
+			else
+			{
+				oBtn.addEventListener('click', aaa, false);
+				oBtn.addEventListener('click', bbb, false);
+			}
+		}
+	</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="aaa" />
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+        window.onload=function ()
+        {
+            var oTxt1=document.getElementById('txt1');
+            var oBtn=document.getElementById('btn1');
+            var oTxt2=document.getElementById('txt2');
+
+            oBtn.onclick=function ()
+            {
+                var re=/我们|他们|你们/g;
+                oTxt2.value=oTxt1.value.replace(re, '***');
+            }
+        }
+	</script>
+</head>
+<body>
+    转换前<textarea id="txt1" rows="10" cols="40"></textarea><br/>
+    <input id="btn1" type="button" value="过滤"><br/>
+    转换后<textarea id="txt2" rows="10" cols="40"></textarea>
+</body>
+</html>

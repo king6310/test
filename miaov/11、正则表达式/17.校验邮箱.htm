@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+
+        window.onload=function ()
+        {
+            var oTxt=document.getElementById('txt1');
+            var oBtn=document.getElementById('btn1');
+
+            var re=/^\w+@[a-z0-9]+\.[a-z]{2,4}$/;
+
+            oBtn.onclick=function ()
+            {
+                if(re.test(oTxt.value))
+                {
+                    alert('对了')
+                }
+                else
+                {
+                    alert('你写错了');
+                }
+            }
+        }  
+	</script>
+</head>
+<body>
+    <input type="text" name="" id="txt1">
+    <input id="btn1" type="button" value="校验">
+</body>
+</html>

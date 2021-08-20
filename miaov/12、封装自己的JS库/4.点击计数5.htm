@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script src="jquery-1.7.1.js"></script>
+	<script>
+		window.onload=function ()
+		{
+			var aBtn=document.getElementsByTagName('input');
+
+			for(var i=0;i<aBtn.length;i++)
+			{
+				(function (obj)
+				{
+					var count=0;
+					obj.onclick=function ()
+					{
+						alert(count++);
+					}
+				})(aBtn[i]);
+			}
+
+			
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="aaa">
+	<input type="button" value="bbb">
+	<input type="button" value="ccc">
+	<input type="button" value="ddd">
+</body>
+</html>

@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2695964 */
+  src: url('iconfont.eot?t=1627653141001'); /* IE9 */
+  src: url('iconfont.eot?t=1627653141001#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPgAAsAAAAACGAAAAOUAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHFQGYACDMgqDaIMvATYCJAMUCwwABCAFhGcHTRtWB8gOJR3BwMDgCQhgPHzt93ru7r4XJsfogMZHRSWK1FcJu1YCGV+hKlR1x9eyMHWZaks3blzr1CymTriFIycwsEQUKsbvxPIV/9VcHq9OXp374X7GK2sbyAPwVbVV4wfbeEADii7CXdq5n8LwWpdxjkCrVdncj4srG0Fwg0AGsI4nszxIYqPB0ATwFZRKAyU0S+quY4v4DCrSG/dHgE/B++Of+PAlqTJzo5PrIjW49scfo4fkkpzlT6TpCtA+oULG4sbUcdNsbPCIgos8tFb5Pe0D2u+aJemnP9v/xP8xulwQ7tHErVaIIk3zz4uaGd0O9hEq/AQOMxFth1yCKB5yGSIj2M+yVgVa0YyP+AZM/CRDFvRO3YEYFhUVGDoaevISKK8uB4QpV928Xl9pVGYckn3a/+SivNQW7GU7VS02JarJogTz2edH1fPSHmhRbDJGWWUVbbNZGZ+ZPNn8xiLLLW/JStNrstT4StGsZAVypeAkBBIChHVqbmYS//Qs1hM2l98eqTaf1HjOqqSMG6tDGwY3UA472Of0YtD42/Vvx4Kwz3s/F52fDi3cMHX+x+XtKzP33UMud7ArO1a441P7C8H+i8GLN+mCgcvnBjEXNujPq6Iv3SjMznL8fOV9gKEnpTM5qSOl57NtS+rsTErzPsPZkZTcaVCTOzqS6xoKuqqjq/bvr4quPg+aT4srV0efZ9Jbkxz7a54xudW0D2h7rgzMtKRoZr5f3nnZjdOkWDLB0PM1SP95kdJqloPOV7PokQsA+Xsa+dd/4/zLfElPSOa/5oACfuw5ZYbjRSpgGPNfiXRm/lmRjohFo1NRqSp29ILW0TYPkPh/Bb/S2uvLNOY+INGHZoEFSJqMQdZsHFVw81Bpsw61ZjvQakHR5DZ9OB6itGDaIQKh2wIknb5C1u0uquDeQmXQX6h1+w+tTiNovjbTQRbwkEBQjfcN4wzJGihbgoJa6yEt6gi+zNcMeYGBB4+Ljs1HSqAB8mMMEAboeIQonOJZPV7MbQZ1OhbneLYfkihagxCXHhNDVb0kmmT1oAAPIiCQGq7PMByDxDKgPGSU/Xz1IJpIh8B3RDUHeQIGtePiRIvtgCoRGjqV3MgiggG0eAhCwVF4EtbDFQt6SKcGWTiuulU/iIRE0wzwc9LFWEhUV2H08mL9C66CVuZ8VaTIUaKKWn0ncgxh8KachhqR8RZYURBZ36E8n3YVAAA=') format('woff2'),
+       url('iconfont.woff?t=1627653141001') format('woff'),
+       url('iconfont.ttf?t=1627653141001') format('truetype'),
+       url('iconfont.svg?t=1627653141001#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tupian:before {
+  content: "\e692";
+}
+
+.icon-fanhui:before {
+  content: "\e624";
+}
+
+.icon-sousuo:before {
+  content: "\e632";
+}
+
+.icon-xiangxia:before {
+  content: "\e600";
+}
+

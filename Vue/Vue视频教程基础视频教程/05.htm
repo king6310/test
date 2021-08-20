@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <counter heading="Likes" color="green"></counter>
+        <counter heading="Dislikes" color="red"></counter>
+    </div>
+    <template id="counter-template">
+        <h1> {{ heading }} </h1>
+        <button @click="count++" style="background: {{ color }};" > {{ count }}</button>
+    </template>
+    <script>
+        Vue.component('counter',{
+            data () {
+                return {
+                    count: 0
+                }
+            },
+            props: ['heading', 'color'],
+            methods:{
+                updataCount () {
+                    this.count++;
+                }
+            },
+            template: '#counter-template'
+        })
+        new Vue({
+            el: '#app'
+        })
+    </script>
+</body>
+</html>

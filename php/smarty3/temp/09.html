@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刘备</title>
+</head>
+<body>
+    <p>
+        {for $i=$start to $end}
+            {$i}&nbsp;
+            {if $i % 3 ==0}
+                <br/>
+            {/if}
+        {/for}
+    </p>
+    <p>
+        {for $i=$start to 100 step 2}
+            {if $i@iteration == $i@first}第一次循环数是：{$i}<br/>{/if}
+            {$i}&nbsp;
+            {if $i@iteration % 3 == 0}<br/>{/if}
+            {if $i@iteration == $i@last}<br/>最后一次循环数是：{$i}{/if}
+        {/for}
+        <br>
+        本次循环的总次数：{$i@total}
+    </p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+		window.onload=function ()
+        {
+            var oImg=new Image();
+            oImg.onload=function ()
+            {
+                alert('图片预加载完成');
+            };
+
+            oImg.onerror=function ()
+            {
+                alert('失败');
+            }
+
+            oImg.src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190322%2Fa944c30ee7b244cf8e248794d6d79d6d.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628751828&t=a7d878b809866e4ce55228ed1a987a47';
+        }
+	</script>
+</head>
+<body>
+	<img width="300" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1207%2F09%2Fc1%2F12275680_1341814069049.jpg&refer=http%3A%2F%2Fimg.pconline.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628751828&t=86639d8a1fd891d426002876a7b33ed2"
+     onmouseover="this.src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20190322%2Fa944c30ee7b244cf8e248794d6d79d6d.jpeg&refer=http%3A%2F%2F5b0988e595225.cdn.sohucs.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628751828&t=a7d878b809866e4ce55228ed1a987a47';"
+     onmouseout="this.src='https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fwallpaper%2F1207%2F09%2Fc1%2F12275680_1341814069049.jpg&refer=http%3A%2F%2Fimg.pconline.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1628751828&t=86639d8a1fd891d426002876a7b33ed2';"
+     />
+</body>
+</html>

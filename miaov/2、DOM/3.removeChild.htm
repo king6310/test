@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function ()
+        {
+            var oUl=document.getElementById('ul1');
+            var aLi=oUl.getElementsByTagName('a');
+
+            for (var index = 0; index < aLi.length; index++) {
+                
+                aLi[index].onclick=function(){
+                    oUl.removeChild(this.parentNode);
+                }
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>sddfasfa <a href="javascript:;">删除</a></li>
+        <li>545155<a href="javascript:;">删除</a></li>
+        <li>terae <a href="javascript:;">删除</a></li>
+        <li>uyjt <a href="javascript:;">删除</a></li>
+    </ul>
+</body>
+</html>

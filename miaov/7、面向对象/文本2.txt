@@ -1,0 +1,21 @@
+prototype(原型)：
+
+
+
+
+
+CSS
+
+
+class        改变一类元素的样式     prototype
+行间样式     改变一个元素的样式     给一个对象加方法
+
+.box {background:red;}
+
+<div class="box" style="background:green;"><div>
+<div class="box"><div>
+<div class="box"><div>
+<div class="box"><div>
+<div class="box"><div>
+<div class="box"><div>
+<div class="box"><div>

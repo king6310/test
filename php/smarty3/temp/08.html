@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>刘备</title>
+</head>
+<body>
+    <p>
+    {if $price > 5000}驴包{/if}
+    {if $price > 10000}
+        实惠
+    {else}
+        不实惠
+    {/if}
+    </p>
+    <p>
+    {if $height == 180}
+        {$height}完美身材
+    {/if}
+    <p>
+        {if $age % 2 ==0 }
+        你的年龄是3的整数倍
+        {else}
+        你的年龄不是3的整数倍
+        {/if}
+    <p>
+    <p>
+        从地址上传值，判断是星期几<br/>
+        如果是0，7，则为周日，如果是6，则为周六，其余判断为工作日
+    </p>
+    <p>
+        {if $smarty.get.today == 0 || $smarty.get.today==7}
+            今天是周日
+        {else if $smarty.get.today ==6}
+            今天是周六
+        {else}
+            今天是工作日
+        {/if}
+        </p>
+
+</body>
+</html>

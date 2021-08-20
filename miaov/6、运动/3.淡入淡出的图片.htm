@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<style>
+		#img1{filter:Alpha(opacity:30); opacity: 0.3;}
+</style>
+	<script>	
+		window.onload=function(){
+			var oImg=document.getElementById('img1');
+			oImg.onmouseover=function(){
+				startMove(100);
+			}
+			oImg.onmouseout=function(){
+				startMove(30);
+			}
+		}
+
+		var timer=null;
+		var alpha=30;
+
+		function startMove(itarget){
+			var oImg=document.getElementById('img1');
+
+			clearInterval(timer);
+			timer=setInterval(()=>{
+				var iSpeed=0;
+
+					if(alpha<itarget){
+						iSpeed=10;
+					}
+					else{
+						iSpeed=-10;
+					}
+
+					if(alpha==itarget){
+						clearInterval(timer);
+					}
+					else{
+						alpha+=iSpeed;
+						oImg.style.filter='alpha(opacity:'+ alpha +')';
+						oImg.style.opacity=alpha/100;
+					}
+			}, 30)
+		}
+	</script>
+</head>
+<body>
+	<img id="img1" src="share-rewards-head.jpg">
+</body>
+</html>

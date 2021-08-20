@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="error" v-show="!message">You must enter a message to submit</div>
+        <textarea v-model="message"></textarea><br/>
+        <button v-show="message">Send message</button>
+        <pre>
+            {{ $data | json }}
+        </pre>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: ''
+            }
+        })
+    </script>
+</body>
+</html>

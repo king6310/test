@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script>
+		function aaa()
+		{
+			alert('a');
+		}
+		function bbb()
+		{
+			alert('b');
+		}
+
+		//1.谁
+		//2.事件
+		//3.函数
+
+		function myAddEvent (obj, sEvent, fn)
+		{
+			if(obj.attachEvent)
+			{
+				obj.attachEvent('on'+sEvent, fn);
+			}
+			else
+			{
+				obj.addEventListener(sEvent, fn, false);
+			}
+		}
+
+		window.onload=function ()
+		{
+			var oBtn=document.getElementById('btn1');
+
+			myAddEvent(oBtn, 'click', aaa);
+			myAddEvent(oBtn, 'click', bbb);
+			
+		}
+	</script>
+</head>
+<body>
+	<input id="btn1" type="button" value="aaa" />
+</body>
+</html>

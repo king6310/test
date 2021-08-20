@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <script src="../vue.min.js"></script>
+    <style>
+        .completed{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <task-app :list="tasks"></task-app>
+    </div>
+
+    <template id="task-template">
+        <h1>
+            My tasks 
+            <span v-show="remaining">{{ remaining }} </span>
+        </h1>
+        <ul>
+            <li 
+            @click="toggLetasks(task)" 
+            :class="{'completed':task.completed}" 
+            v-for="task in list"
+         > 
+             {{ task.body }}
+ 
+             <strong @click="deleteTask(task)">X</strong>
+         </li>
+        </ul>
+    </template>
+    <script>
+        Vue.component('task-app',{
+            props:['list'],
+            template: '#task-template',
+            methods:{
+                toggLetasks (task) {
+                    task.completed=!task.completed;
+                },
+                deleteTask (task) {
+                    this.list.$remove(task);
+                }
+            },
+            computed: {
+                remaining () {
+                    return this.list.filter(function(task){
+                        return ! task.completed;
+                    }).length;
+                }
+            }
+        })
+        new Vue({
+            el: '#app',
+            data:{
+                tasks:[
+                    {body:'go to the movie', completed:false},
+                    {body:'go to the js in ction', completed:false},
+                    {body:'go to the shop', completed:false} 
+                ]
+            } 
+        })
+    </script>
+</body>
+</html>

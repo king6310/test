@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function getByClass(oParent, sClass)
+        {
+            var aEle=oParent.getElementsByTagName("*");
+            var aResult=[];
+
+            for (var index = 0; index < aEle.length; index++) {
+                if(aEle[index].className==sClass)
+                {
+                    aResult.push(aEle[index]);
+                }
+            }
+
+            return aResult;
+        }
+
+        window.onload=function ()
+        {
+            var oUl=document.getElementById('ul1');
+            var aBox=getByClass(oUl, 'box');
+
+            for (var index = 0; index < aBox.length; index++) 
+            {
+                if(aBox[index].className=='box')
+                {
+                    aBox[index].style.background="red";
+                }
+            }
+
+            getByClass(oUl, 'boxs')[0].style.background="yellow"
+
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li></li>
+        <li></li>
+        <li class='boxs'></li>
+        <li class="box"></li>
+        <li></li>
+        <li class="box"></li>
+        <li></li>
+        <li class="box"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+</head>
+<body>
+    {literal}
+        foreach是一个非常重要的循环结构，要认真学习
+        foreach循环数组的典型写法
+        {foreach $form as $key => $item}
+        {/foreach}
+    {/literal}
+    <h2>布尔商城商品列表</h2>
+    <table  width="40%" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>序号</td><td>商品名</td><td>商品价格</td>
+        </tr>
+        {foreach $goods as $k => $g}
+        <tr {if $g@iteration % 2} bgcolor="#2e8b57" {/if}>
+            <td>{$g@iteration}</td>
+            <td>{$g.tilte}</td>
+            <td>{$g.nid}</td>
+        </tr>
+        {/foreach}
+    </table>
+</body>
+</html>

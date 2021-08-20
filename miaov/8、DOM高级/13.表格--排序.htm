@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function()
+        {
+            var oTab=document.getElementById('tab1');
+            var oBtn=document.getElementById('btn1');
+
+            oBtn.onclick=function ()
+            {
+                var oRow=oTab.tBodies[0].rows;
+                var arr=[];
+
+                //1.转成数组
+                for (let index = 0; index < oRow.length; index++) {
+                    const element = oRow[index];
+                    arr[index]=element;
+                }
+
+                //2.数组排序
+                arr.sort(function(tr1, tr2){
+                    return parseInt(tr1.cells[0].innerHTML)-parseInt(tr2.cells[0].innerHTML);
+                }) 
+
+                //3.重新插入
+                for (let index = 0; index < arr.length; index++) {
+                    const element = arr[index];
+                    oTab.tBodies[0].appendChild(element);
+                }
+
+            }
+           
+        }
+    </script>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="排序">
+    <table id="tab1" border="1" width="400">
+        <thead>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>操作</td>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>张三</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Leo</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>1</td>
+                <td>Blue</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>李四</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>麻子</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>王二</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

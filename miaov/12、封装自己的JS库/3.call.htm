@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script src="jquery-1.7.1.js"></script>
+	<script>
+		function show(a, b)
+		{
+			alert('this是：'+this+', a是：'+a+', b是：'+b);
+		}
+
+		show(12, 5);			//window
+		show.call('abc', 12, 5);	//window
+		show.apply('abc', [12, 5]);
+	</script>
+</head>
+<body>
+</body>
+</html>

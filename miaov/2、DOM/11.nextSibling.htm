@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload=function ()
+        {
+            var oLi=document.getElementById('li1');
+
+            //IE
+            // oLi.nextSibling.style.background="red";
+
+            //FF
+            // oLi.nextElementSibling.style.background="red";
+
+            var oNext=oLi.nextElementSibling||oLi.nextSibling;
+
+            oNext.style.background='red';
+
+            //  previousSibling
+            //  previousElementSibling
+        }
+    </script>
+</head>
+<body>
+    <ul id="ul1">
+        <li></li>
+        <li id="li1"></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
